@@ -25,7 +25,7 @@ The value of learning rate is taken as 0.01, which was chosen by hit-and-trial. 
 
 2. Make sure that library 'mnist' is installed on the system. Use the command
 ```
-pip-install python-mnist
+pip install python-mnist
 ```
 to install the library
 
