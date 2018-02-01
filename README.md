@@ -50,37 +50,37 @@ Note: This is nowhere close to state-of-the-art methods, but the code implementa
 ## Technicalities and Brief Code Description
 The code currently doesn't support inputs from command prompt, since architecture was specified initially. But the code is modular enough that by changing arguments to the `FeedForward` function invoked in `main`, one can change the number of hidden layers and neurons, and activation function. Following are the arguments to Feedforward function and their roles:
 
-* **X\_train\_ : ** This takes in the entire training input data (split is performed inside) as a NumPy matrix.
+* **X\_train\_** : This takes in the entire training input data (split is performed inside) as a NumPy matrix.
 
 
-* **Y\_train\_ : ** This takes in the output labels for training data, in one-hot encoded form as a NumPy matrix.
+* **Y\_train\_** :  This takes in the output labels for training data, in one-hot encoded form as a NumPy matrix.
 
 
-* **X_test : ** This takes in the entire testin input data as a NumPy matrix.
+* **X_test** :  This takes in the entire testin input data as a NumPy matrix.
 
 
-* **Y_test : ** This takes in the output labels for testing data, in one-hot encoded form as a NumPy matrix.
+* **Y_test** :  This takes in the output labels for testing data, in one-hot encoded form as a NumPy matrix.
 
 
-* **hidden : ** This takes in a non-empty list as argument, where length of list specifies number of hidden layers, and each element specifies number of neurons in that layer.
+* **hidden** :  This takes in a non-empty list as argument, where length of list specifies number of hidden layers, and each element specifies number of neurons in that layer.
 
 
-* **activations : ** This takes in a non-empty list  as argument, where (length of list - 1) specifies number of hidden layers, and each element specifies activation function for that layer. Last element of the list specifies activation function for output layer. Currently that value is fixed as *softmax*.
+* **activations** :  This takes in a non-empty list  as argument, where (length of list - 1) specifies number of hidden layers, and each element specifies activation function for that layer. Last element of the list specifies activation function for output layer. Currently that value is fixed as *softmax*.
 
 
-* **activations_ : ** This takes in a non-empty list  as argument, where length of list specifies number of hidden layers, and each element specifies derivative of activation function for that layer. This is essentially a duplicate of the *activations* argument, in the sense that for a hidden layer, if the passed function is *ReLu*, the corresponding argument in this would be *ReLu_*.
+* **activations_** :  This takes in a non-empty list  as argument, where length of list specifies number of hidden layers, and each element specifies derivative of activation function for that layer. This is essentially a duplicate of the *activations* argument, in the sense that for a hidden layer, if the passed function is *ReLu*, the corresponding argument in this would be *ReLu_*.
 
 
-* **eta_ : ** This is the constant learning rate for all the layers. Default value is 0.1.
+* **eta_** :  This is the constant learning rate for all the layers. Default value is 0.1.
 
 
-* **batch_size : ** This is the batch size for stochastic gradient descent. Default value is 128.
+* **batch_size** :  This is the batch size for stochastic gradient descent. Default value is 128.
 
 
-* **epochs : ** This is the number of epochs for which the model is to train. Default value is 150.
+* **epochs** :  This is the number of epochs for which the model is to train. Default value is 150.
 
 
-* **holdoutRatio : ** This is the percent of training data (specified in decimals) that is to be kept as validation data. Default value is 0.2.
+* **holdoutRatio** :  This is the percent of training data (specified in decimals) that is to be kept as validation data. Default value is 0.2.
 
 
-* **momentum : ** This is the momentum factor (alpha) to be used in case a momentum gradient descent method is decided to be implemented. Default value is 0 i.e. no momentum.
+* **momentum** :  This is the momentum factor (alpha) to be used in case a momentum gradient descent method is decided to be implemented. Default value is 0 i.e. no momentum.
