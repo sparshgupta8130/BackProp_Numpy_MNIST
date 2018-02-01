@@ -37,13 +37,13 @@ python backprop_nn.py
 ## Results
 For the values of hyperparameters mentioned above, and for the architecture mentioned above, the results obtained were:
 
-Early Stopping Epoch : 297
+Early Stopping Epoch : 553
 
-Training Accuracy : 91.3479%
+Training Accuracy : 93.9958%
 
-Testing Accuracy : 91.4%
+Testing Accuracy : 92.83%
 
-Validation Accuracy : 91.33%
+Validation Accuracy : 92.9166%
 
 Note: This is nowhere close to state-of-the-art methods, but the code implementation is correct, with additional optimizations implemented that mainly affect the training speed. Proper tuning of the model was not performed due to huge computation time and limited resources with me, but with better architecture, greater accuracies can be achieved. One such method is to use 2 hidden layers with 64 neurons each, and with *tanh* activation function.
 
